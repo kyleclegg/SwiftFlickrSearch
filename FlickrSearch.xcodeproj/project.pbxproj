@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7102CEB1A38FB96004F329C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CCB1A38FB96004F329C /* MKAnnotationView+WebCache.m */; };
+		D7102CEC1A38FB96004F329C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CCD1A38FB96004F329C /* NSData+ImageContentType.m */; };
+		D7102CED1A38FB96004F329C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CCF1A38FB96004F329C /* SDImageCache.m */; };
+		D7102CEE1A38FB96004F329C /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CD11A38FB96004F329C /* SDWebImageCompat.m */; };
+		D7102CEF1A38FB96004F329C /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CD31A38FB96004F329C /* SDWebImageDecoder.m */; };
+		D7102CF01A38FB96004F329C /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CD51A38FB96004F329C /* SDWebImageDownloader.m */; };
+		D7102CF11A38FB96004F329C /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CD71A38FB96004F329C /* SDWebImageDownloaderOperation.m */; };
+		D7102CF21A38FB96004F329C /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CD91A38FB96004F329C /* SDWebImageManager.m */; };
+		D7102CF31A38FB96004F329C /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CDC1A38FB96004F329C /* SDWebImagePrefetcher.m */; };
+		D7102CF41A38FB96004F329C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CDE1A38FB96004F329C /* UIButton+WebCache.m */; };
+		D7102CF51A38FB96004F329C /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CE01A38FB96004F329C /* UIImage+GIF.m */; };
+		D7102CF61A38FB96004F329C /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CE21A38FB96004F329C /* UIImage+MultiFormat.m */; };
+		D7102CF71A38FB96004F329C /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CE41A38FB96004F329C /* UIImage+WebP.m */; };
+		D7102CF81A38FB96004F329C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CE61A38FB96004F329C /* UIImageView+HighlightedWebCache.m */; };
+		D7102CF91A38FB96004F329C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CE81A38FB96004F329C /* UIImageView+WebCache.m */; };
+		D7102CFA1A38FB96004F329C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7102CEA1A38FB96004F329C /* UIView+WebCacheOperation.m */; };
+		D7102CFC1A38FBA6004F329C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7102CFB1A38FBA6004F329C /* ImageIO.framework */; };
 		D79E16AA1A3830EA004B0DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */; };
 		D79E16AC1A3830EA004B0DD8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */; };
 		D79E16AF1A3830EA004B0DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E16AD1A3830EA004B0DD8 /* Main.storyboard */; };
@@ -14,7 +31,8 @@
 		D79E16B41A3830EA004B0DD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79E16B21A3830EA004B0DD8 /* LaunchScreen.xib */; };
 		D79E16C01A3830EA004B0DD8 /* FlickrSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */; };
 		D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16C91A383967004B0DD8 /* SearchResultCell.swift */; };
-		D79E16D01A3839E6004B0DD8 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */; };
+		D79E16D01A3839E6004B0DD8 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */; };
+		D7D499F21A3900700053F50F /* FlickrProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D499F11A3900700053F50F /* FlickrProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +46,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7102CCA1A38FB96004F329C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		D7102CCB1A38FB96004F329C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		D7102CCC1A38FB96004F329C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		D7102CCD1A38FB96004F329C /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		D7102CCE1A38FB96004F329C /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		D7102CCF1A38FB96004F329C /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		D7102CD01A38FB96004F329C /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		D7102CD11A38FB96004F329C /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		D7102CD21A38FB96004F329C /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		D7102CD31A38FB96004F329C /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		D7102CD41A38FB96004F329C /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		D7102CD51A38FB96004F329C /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		D7102CD61A38FB96004F329C /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		D7102CD71A38FB96004F329C /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		D7102CD81A38FB96004F329C /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		D7102CD91A38FB96004F329C /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		D7102CDA1A38FB96004F329C /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		D7102CDB1A38FB96004F329C /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		D7102CDC1A38FB96004F329C /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		D7102CDD1A38FB96004F329C /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		D7102CDE1A38FB96004F329C /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		D7102CDF1A38FB96004F329C /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		D7102CE01A38FB96004F329C /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		D7102CE11A38FB96004F329C /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		D7102CE21A38FB96004F329C /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		D7102CE31A38FB96004F329C /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		D7102CE41A38FB96004F329C /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		D7102CE51A38FB96004F329C /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		D7102CE61A38FB96004F329C /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		D7102CE71A38FB96004F329C /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		D7102CE81A38FB96004F329C /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		D7102CE91A38FB96004F329C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		D7102CEA1A38FB96004F329C /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		D7102CFB1A38FBA6004F329C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D7102CFE1A38FC4D004F329C /* FlickrSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickrSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		D79E16A41A3830EA004B0DD8 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79E16A81A3830EA004B0DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +92,8 @@
 		D79E16BE1A3830EA004B0DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchTests.swift; sourceTree = "<group>"; };
 		D79E16C91A383967004B0DD8 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		D7D499F11A3900700053F50F /* FlickrProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7102CFC1A38FBA6004F329C /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +115,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7102CC91A38FB96004F329C /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				D7102CCA1A38FB96004F329C /* MKAnnotationView+WebCache.h */,
+				D7102CCB1A38FB96004F329C /* MKAnnotationView+WebCache.m */,
+				D7102CCC1A38FB96004F329C /* NSData+ImageContentType.h */,
+				D7102CCD1A38FB96004F329C /* NSData+ImageContentType.m */,
+				D7102CCE1A38FB96004F329C /* SDImageCache.h */,
+				D7102CCF1A38FB96004F329C /* SDImageCache.m */,
+				D7102CD01A38FB96004F329C /* SDWebImageCompat.h */,
+				D7102CD11A38FB96004F329C /* SDWebImageCompat.m */,
+				D7102CD21A38FB96004F329C /* SDWebImageDecoder.h */,
+				D7102CD31A38FB96004F329C /* SDWebImageDecoder.m */,
+				D7102CD41A38FB96004F329C /* SDWebImageDownloader.h */,
+				D7102CD51A38FB96004F329C /* SDWebImageDownloader.m */,
+				D7102CD61A38FB96004F329C /* SDWebImageDownloaderOperation.h */,
+				D7102CD71A38FB96004F329C /* SDWebImageDownloaderOperation.m */,
+				D7102CD81A38FB96004F329C /* SDWebImageManager.h */,
+				D7102CD91A38FB96004F329C /* SDWebImageManager.m */,
+				D7102CDA1A38FB96004F329C /* SDWebImageOperation.h */,
+				D7102CDB1A38FB96004F329C /* SDWebImagePrefetcher.h */,
+				D7102CDC1A38FB96004F329C /* SDWebImagePrefetcher.m */,
+				D7102CDD1A38FB96004F329C /* UIButton+WebCache.h */,
+				D7102CDE1A38FB96004F329C /* UIButton+WebCache.m */,
+				D7102CDF1A38FB96004F329C /* UIImage+GIF.h */,
+				D7102CE01A38FB96004F329C /* UIImage+GIF.m */,
+				D7102CE11A38FB96004F329C /* UIImage+MultiFormat.h */,
+				D7102CE21A38FB96004F329C /* UIImage+MultiFormat.m */,
+				D7102CE31A38FB96004F329C /* UIImage+WebP.h */,
+				D7102CE41A38FB96004F329C /* UIImage+WebP.m */,
+				D7102CE51A38FB96004F329C /* UIImageView+HighlightedWebCache.h */,
+				D7102CE61A38FB96004F329C /* UIImageView+HighlightedWebCache.m */,
+				D7102CE71A38FB96004F329C /* UIImageView+WebCache.h */,
+				D7102CE81A38FB96004F329C /* UIImageView+WebCache.m */,
+				D7102CE91A38FB96004F329C /* UIView+WebCacheOperation.h */,
+				D7102CEA1A38FB96004F329C /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		D7102CFD1A38FC19004F329C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7102CFB1A38FBA6004F329C /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D79E169B1A3830EA004B0DD8 = {
 			isa = PBXGroup;
 			children = (
 				D79E16A61A3830EA004B0DD8 /* FlickrSearch */,
 				D79E16BC1A3830EA004B0DD8 /* FlickrSearchTests */,
 				D79E16A51A3830EA004B0DD8 /* Products */,
+				D7102CFD1A38FC19004F329C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +187,13 @@
 			children = (
 				D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */,
 				D79E16AD1A3830EA004B0DD8 /* Main.storyboard */,
-				D79E16CB1A38399E004B0DD8 /* UI */,
-				D79E16CE1A3839C7004B0DD8 /* Model */,
+				D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */,
+				D79E16C91A383967004B0DD8 /* SearchResultCell.swift */,
+				D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */,
+				D7D499F11A3900700053F50F /* FlickrProvider.swift */,
+				D7102CFE1A38FC4D004F329C /* FlickrSearch-Bridging-Header.h */,
 				D79E16B01A3830EA004B0DD8 /* Images.xcassets */,
+				D7102CC91A38FB96004F329C /* SDWebImage */,
 				D79E16A71A3830EA004B0DD8 /* Supporting Files */,
 			);
 			path = FlickrSearch;
@@ -115,39 +223,6 @@
 				D79E16BE1A3830EA004B0DD8 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D79E16CB1A38399E004B0DD8 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16CC1A3839A8004B0DD8 /* Controllers */,
-				D79E16CD1A3839B4004B0DD8 /* Cells */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		D79E16CC1A3839A8004B0DD8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		D79E16CD1A3839B4004B0DD8 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16C91A383967004B0DD8 /* SearchResultCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		D79E16CE1A3839C7004B0DD8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +325,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7102CF81A38FB96004F329C /* UIImageView+HighlightedWebCache.m in Sources */,
+				D7102CF61A38FB96004F329C /* UIImage+MultiFormat.m in Sources */,
+				D7102CF11A38FB96004F329C /* SDWebImageDownloaderOperation.m in Sources */,
 				D79E16AC1A3830EA004B0DD8 /* SearchViewController.swift in Sources */,
+				D7102CEE1A38FB96004F329C /* SDWebImageCompat.m in Sources */,
+				D7102CF51A38FB96004F329C /* UIImage+GIF.m in Sources */,
+				D7102CF31A38FB96004F329C /* SDWebImagePrefetcher.m in Sources */,
 				D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */,
-				D79E16D01A3839E6004B0DD8 /* SearchResult.swift in Sources */,
+				D79E16D01A3839E6004B0DD8 /* FlickrPhoto.swift in Sources */,
+				D7102CF71A38FB96004F329C /* UIImage+WebP.m in Sources */,
+				D7102CF91A38FB96004F329C /* UIImageView+WebCache.m in Sources */,
+				D7102CF01A38FB96004F329C /* SDWebImageDownloader.m in Sources */,
+				D7102CFA1A38FB96004F329C /* UIView+WebCacheOperation.m in Sources */,
+				D7102CF41A38FB96004F329C /* UIButton+WebCache.m in Sources */,
+				D7102CEB1A38FB96004F329C /* MKAnnotationView+WebCache.m in Sources */,
+				D7D499F21A3900700053F50F /* FlickrProvider.swift in Sources */,
+				D7102CEC1A38FB96004F329C /* NSData+ImageContentType.m in Sources */,
 				D79E16AA1A3830EA004B0DD8 /* AppDelegate.swift in Sources */,
+				D7102CF21A38FB96004F329C /* SDWebImageManager.m in Sources */,
+				D7102CEF1A38FB96004F329C /* SDWebImageDecoder.m in Sources */,
+				D7102CED1A38FB96004F329C /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +468,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/FlickrSearch\"",
+				);
 				INFOPLIST_FILE = FlickrSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlickrSearch/FlickrSearch-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -386,9 +485,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/FlickrSearch\"",
+				);
 				INFOPLIST_FILE = FlickrSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlickrSearch/FlickrSearch-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -445,6 +551,7 @@
 				D79E16C51A3830EA004B0DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D79E16C61A3830EA004B0DD8 /* Build configuration list for PBXNativeTarget "FlickrSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +560,7 @@
 				D79E16C81A3830EA004B0DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
