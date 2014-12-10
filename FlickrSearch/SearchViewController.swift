@@ -39,6 +39,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("PhotoSegue", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
@@ -47,7 +48,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         performSearchWithText(searchBar.text)
-//        self.title = searchBar.text
+    }
+    
+    // MARK - Segue 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PhotoSegue" {
+            let photoViewController = segue.destinationViewController as PhotoViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow()
+            photoViewController.flickrPhoto = photos[selectedIndexPath!.row]
+        }
     }
 
     // MARK: - Private

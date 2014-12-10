@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="xUE-PC-3UZ" id="WO1-6G-9Co"/>
                         <outlet property="tableView" destination="qGx-Ea-vRM" id="1ys-0k-HY3"/>
+                        <segue destination="rzo-l8-yI1" kind="show" identifier="PhotoSegue" id="gm1-Ls-ZsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -135,6 +136,39 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1088" y="-268"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="Oce-Zr-axy">
+            <objects>
+                <viewController id="rzo-l8-yI1" customClass="PhotoViewController" customModule="FlickrSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cTK-dP-80k"/>
+                        <viewControllerLayoutGuide type="bottom" id="z2N-IN-pyk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VM8-zd-B5M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2OB-3a-uPk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2OB-3a-uPk" firstAttribute="top" secondItem="VM8-zd-B5M" secondAttribute="top" id="4r1-mE-4gd"/>
+                            <constraint firstItem="z2N-IN-pyk" firstAttribute="top" secondItem="2OB-3a-uPk" secondAttribute="bottom" id="9hn-IC-Qbp"/>
+                            <constraint firstAttribute="trailing" secondItem="2OB-3a-uPk" secondAttribute="trailing" id="s25-Rv-4p2"/>
+                            <constraint firstItem="2OB-3a-uPk" firstAttribute="leading" secondItem="VM8-zd-B5M" secondAttribute="leading" id="vsv-5k-GXf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="094-W5-z4e"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="2OB-3a-uPk" id="Jfg-sV-RJO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btv-gc-u0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="-268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EwV-f8-Bk5">

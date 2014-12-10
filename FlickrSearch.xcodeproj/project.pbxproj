@@ -33,6 +33,7 @@
 		D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16C91A383967004B0DD8 /* SearchResultCell.swift */; };
 		D79E16D01A3839E6004B0DD8 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */; };
 		D7D499F21A3900700053F50F /* FlickrProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D499F11A3900700053F50F /* FlickrProvider.swift */; };
+		D7D499F41A39074E0053F50F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D499F31A39074E0053F50F /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		D79E16C91A383967004B0DD8 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 		D7D499F11A3900700053F50F /* FlickrProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrProvider.swift; sourceTree = "<group>"; };
+		D7D499F31A39074E0053F50F /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */,
 				D79E16AD1A3830EA004B0DD8 /* Main.storyboard */,
 				D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */,
+				D7D499F31A39074E0053F50F /* PhotoViewController.swift */,
 				D79E16C91A383967004B0DD8 /* SearchResultCell.swift */,
 				D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */,
 				D7D499F11A3900700053F50F /* FlickrProvider.swift */,
@@ -346,6 +349,7 @@
 				D7102CF21A38FB96004F329C /* SDWebImageManager.m in Sources */,
 				D7102CEF1A38FB96004F329C /* SDWebImageDecoder.m in Sources */,
 				D7102CED1A38FB96004F329C /* SDImageCache.m in Sources */,
+				D7D499F41A39074E0053F50F /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
