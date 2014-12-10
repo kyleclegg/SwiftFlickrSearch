@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D79E16AA1A3830EA004B0DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */; };
-		D79E16AC1A3830EA004B0DD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16AB1A3830EA004B0DD8 /* ViewController.swift */; };
+		D79E16AC1A3830EA004B0DD8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */; };
 		D79E16AF1A3830EA004B0DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E16AD1A3830EA004B0DD8 /* Main.storyboard */; };
 		D79E16B11A3830EA004B0DD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79E16B01A3830EA004B0DD8 /* Images.xcassets */; };
 		D79E16B41A3830EA004B0DD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79E16B21A3830EA004B0DD8 /* LaunchScreen.xib */; };
 		D79E16C01A3830EA004B0DD8 /* FlickrSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */; };
+		D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16C91A383967004B0DD8 /* SearchResultCell.swift */; };
+		D79E16D01A3839E6004B0DD8 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		D79E16A41A3830EA004B0DD8 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79E16A81A3830EA004B0DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D79E16AB1A3830EA004B0DD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D79E16AE1A3830EA004B0DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D79E16B01A3830EA004B0DD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D79E16B31A3830EA004B0DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D79E16B91A3830EA004B0DD8 /* FlickrSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79E16BE1A3830EA004B0DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchTests.swift; sourceTree = "<group>"; };
+		D79E16C91A383967004B0DD8 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				D79E16A91A3830EA004B0DD8 /* AppDelegate.swift */,
-				D79E16AB1A3830EA004B0DD8 /* ViewController.swift */,
 				D79E16AD1A3830EA004B0DD8 /* Main.storyboard */,
+				D79E16CB1A38399E004B0DD8 /* UI */,
+				D79E16CE1A3839C7004B0DD8 /* Model */,
 				D79E16B01A3830EA004B0DD8 /* Images.xcassets */,
-				D79E16B21A3830EA004B0DD8 /* LaunchScreen.xib */,
 				D79E16A71A3830EA004B0DD8 /* Supporting Files */,
 			);
 			path = FlickrSearch;
@@ -90,6 +94,7 @@
 		D79E16A71A3830EA004B0DD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D79E16B21A3830EA004B0DD8 /* LaunchScreen.xib */,
 				D79E16A81A3830EA004B0DD8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +115,39 @@
 				D79E16BE1A3830EA004B0DD8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D79E16CB1A38399E004B0DD8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D79E16CC1A3839A8004B0DD8 /* Controllers */,
+				D79E16CD1A3839B4004B0DD8 /* Cells */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D79E16CC1A3839A8004B0DD8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D79E16AB1A3830EA004B0DD8 /* SearchViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D79E16CD1A3839B4004B0DD8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D79E16C91A383967004B0DD8 /* SearchResultCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D79E16CE1A3839C7004B0DD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D79E16CF1A3839E6004B0DD8 /* SearchResult.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D79E16AC1A3830EA004B0DD8 /* ViewController.swift in Sources */,
+				D79E16AC1A3830EA004B0DD8 /* SearchViewController.swift in Sources */,
+				D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */,
+				D79E16D01A3839E6004B0DD8 /* SearchResult.swift in Sources */,
 				D79E16AA1A3830EA004B0DD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
