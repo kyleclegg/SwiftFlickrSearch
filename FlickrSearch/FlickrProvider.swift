@@ -51,7 +51,6 @@ class FlickrProvider {
                 return flickrPhoto
             }
             
-            println("done")
             onCompletion(nil, flickrPhotos)
         })
         searchTask.resume()

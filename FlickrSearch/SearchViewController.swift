@@ -11,12 +11,23 @@ import UIKit
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchControllerDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var photos: [FlickrPhoto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func resetSearch(sender: AnyObject) {
+        photos.removeAll(keepCapacity: false);
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        tableView.reloadData()
+        self.title = "Flickr Search"
     }
 
     // MARK: - UITableViewDataSource

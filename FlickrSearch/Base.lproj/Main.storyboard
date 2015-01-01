@@ -49,7 +49,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WGv-an-3Nk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WGv-an-3Nk" userLabel="Result Image View">
                                                     <rect key="frame" x="500" y="5" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="0Do-Li-9iM"/>
@@ -102,8 +102,15 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qGx-Ea-vRM" secondAttribute="bottom" id="ll1-MD-m1j"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Flickr Search" id="ix4-Y2-eiX"/>
+                    <navigationItem key="navigationItem" title="Flickr Search" id="ix4-Y2-eiX">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="Di7-nF-vom">
+                            <connections>
+                                <action selector="resetSearch:" destination="vXZ-lx-hvc" id="PfJ-JQ-5P5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="yLr-UH-3Ka" id="tPU-3P-0hy"/>
                         <outlet property="searchDisplayController" destination="xUE-PC-3UZ" id="WO1-6G-9Co"/>
                         <outlet property="tableView" destination="qGx-Ea-vRM" id="1ys-0k-HY3"/>
                         <segue destination="rzo-l8-yI1" kind="show" identifier="PhotoSegue" id="gm1-Ls-ZsS"/>
