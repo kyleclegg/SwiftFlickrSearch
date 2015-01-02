@@ -1,24 +1,21 @@
 FlickrSearch
 ============
 
-This project showcases working with the Flickr API to perform a search and display images. It is implemented in Swift using a UISearchDisplayController and the callback pattern.
+This project showcases several fundamental iOS programming tasks in Swift. The app hits the Flickr API to perform a search and display images. It is meant to be a clean example of working with a REST API and JSON in Swift, and demonstrates using asychronous callbacks to simplify networking requests and eliminate messy view controllers.
 
 ### Technologies Used
 
 - Swift
 - FlickrAPI
 - UISearchDisplayController and UISearchBar
+- Asychronous Callback Pattern
+- JSON Parsing
 - SDWebImage
-- Asychronous Callbacks
 
 ### Getting Started
 
 - Clone the repo and run FlickrSearch.xcodeproj
 - No pod install or carthage update needed -- the only external library, SDWebImage, has been added to the project directly
-
-## Overview
-
-This project showcases some best practices for writing Swift applications, including appropriate use of naming conventions, pragma marks, static variables, nil coalescing operator, JSON parsing, and callbacks.
 
 ### Working with the Flickr API
 
@@ -130,7 +127,7 @@ FlickrProvider.fetchPhotosForSearchText(searchText, onCompletion: { (error: NSEr
 })
 ```
 
-## Other Notes
+### Other Notes
 
 - If you plan to build on this or use it a lot, I recommend replacing the Flickr API key with your own
 - Async pallback pattern in Swift credit goes to [@szehnder](https://gist.github.com/szehnder/84b0bd6f45a7f3f99306)
