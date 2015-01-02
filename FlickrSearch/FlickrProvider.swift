@@ -16,6 +16,10 @@ class FlickrProvider {
         static let flickrKey = "0461b2b85aee5a025189ce3eed1aff6b"
     }
     
+    struct Errors {
+        static let invalidAccessErrorCode = 100
+    }
+    
     class func fetchPhotosForSearchText(searchText: String, onCompletion: FlickrResponse) -> Void {
         
         let escapedSearchText: String = searchText.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
@@ -26,6 +30,7 @@ class FlickrProvider {
             if error != nil {
                 println("Error fetching photos: \(error)")
                 onCompletion(error, nil)
+                return
             }
             
             var jsonError: NSError?
@@ -33,6 +38,15 @@ class FlickrProvider {
             if jsonError != nil {
                 println("Error parsing JSON: \(jsonError!)")
                 onCompletion(jsonError, nil)
+                return
+            }
+            
+            if let statusCode = resultsDictionary!["code"] as? Int {
+                if statusCode == Errors.invalidAccessErrorCode {
+                    let invalidAccessError = NSError(domain: "com.flickr.api", code: statusCode, userInfo: nil)
+                    onCompletion(invalidAccessError, nil)
+                    return
+                }
             }
             
             let photosContainer = resultsDictionary!["photos"] as NSDictionary
@@ -55,4 +69,5 @@ class FlickrProvider {
         })
         searchTask.resume()
     }
+    
 }

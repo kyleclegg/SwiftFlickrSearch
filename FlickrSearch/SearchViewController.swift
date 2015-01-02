@@ -81,6 +81,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 self.photos = flickrPhotos!
             } else {
                 self.photos = []
+                if (error!.code == FlickrProvider.Errors.invalidAccessErrorCode) {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.showErrorAlert()
+                    })
+                }
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.title = searchText
@@ -88,5 +93,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             })
         })
     }
+    
+    private func showErrorAlert() {
+        let alertController = UIAlertController(title: "Search Error", message: "Invalid API Key", preferredStyle: .Alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .Default) { (action) in
+            
+        }
+        alertController.addAction(dismissAction)
+        self.presentViewController(alertController, animated: true) {
+            
+        }
+    }
+    
 }
 

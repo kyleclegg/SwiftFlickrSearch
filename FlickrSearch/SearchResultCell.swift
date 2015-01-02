@@ -18,4 +18,5 @@ class SearchResultCell: UITableViewCell {
         resultTitleLabel.text = flickrPhoto.title
         resultImageView.sd_setImageWithURL(flickrPhoto.photoUrl)
     }
+    
 }

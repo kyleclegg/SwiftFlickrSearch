@@ -29,22 +29,11 @@
 		D79E16AF1A3830EA004B0DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E16AD1A3830EA004B0DD8 /* Main.storyboard */; };
 		D79E16B11A3830EA004B0DD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79E16B01A3830EA004B0DD8 /* Images.xcassets */; };
 		D79E16B41A3830EA004B0DD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79E16B21A3830EA004B0DD8 /* LaunchScreen.xib */; };
-		D79E16C01A3830EA004B0DD8 /* FlickrSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */; };
 		D79E16CA1A383967004B0DD8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16C91A383967004B0DD8 /* SearchResultCell.swift */; };
 		D79E16D01A3839E6004B0DD8 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */; };
 		D7D499F21A3900700053F50F /* FlickrProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D499F11A3900700053F50F /* FlickrProvider.swift */; };
 		D7D499F41A39074E0053F50F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D499F31A39074E0053F50F /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D79E16BA1A3830EA004B0DD8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D79E169C1A3830EA004B0DD8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D79E16A31A3830EA004B0DD8;
-			remoteInfo = FlickrSearch;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D7102CCA1A38FB96004F329C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -89,9 +78,6 @@
 		D79E16AE1A3830EA004B0DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D79E16B01A3830EA004B0DD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D79E16B31A3830EA004B0DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D79E16B91A3830EA004B0DD8 /* FlickrSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D79E16BE1A3830EA004B0DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchTests.swift; sourceTree = "<group>"; };
 		D79E16C91A383967004B0DD8 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D79E16CF1A3839E6004B0DD8 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 		D7D499F11A3900700053F50F /* FlickrProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrProvider.swift; sourceTree = "<group>"; };
@@ -104,13 +90,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7102CFC1A38FBA6004F329C /* ImageIO.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D79E16B61A3830EA004B0DD8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				D79E16A61A3830EA004B0DD8 /* FlickrSearch */,
-				D79E16BC1A3830EA004B0DD8 /* FlickrSearchTests */,
 				D79E16A51A3830EA004B0DD8 /* Products */,
 				D7102CFD1A38FC19004F329C /* Frameworks */,
 			);
@@ -179,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				D79E16A41A3830EA004B0DD8 /* FlickrSearch.app */,
-				D79E16B91A3830EA004B0DD8 /* FlickrSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,23 +188,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D79E16BC1A3830EA004B0DD8 /* FlickrSearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16BF1A3830EA004B0DD8 /* FlickrSearchTests.swift */,
-				D79E16BD1A3830EA004B0DD8 /* Supporting Files */,
-			);
-			path = FlickrSearchTests;
-			sourceTree = "<group>";
-		};
-		D79E16BD1A3830EA004B0DD8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D79E16BE1A3830EA004B0DD8 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,24 +208,6 @@
 			productReference = D79E16A41A3830EA004B0DD8 /* FlickrSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D79E16B81A3830EA004B0DD8 /* FlickrSearchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D79E16C61A3830EA004B0DD8 /* Build configuration list for PBXNativeTarget "FlickrSearchTests" */;
-			buildPhases = (
-				D79E16B51A3830EA004B0DD8 /* Sources */,
-				D79E16B61A3830EA004B0DD8 /* Frameworks */,
-				D79E16B71A3830EA004B0DD8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D79E16BB1A3830EA004B0DD8 /* PBXTargetDependency */,
-			);
-			name = FlickrSearchTests;
-			productName = FlickrSearchTests;
-			productReference = D79E16B91A3830EA004B0DD8 /* FlickrSearchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,10 +219,6 @@
 				TargetAttributes = {
 					D79E16A31A3830EA004B0DD8 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					D79E16B81A3830EA004B0DD8 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = D79E16A31A3830EA004B0DD8;
 					};
 				};
 			};
@@ -298,7 +236,6 @@
 			projectRoot = "";
 			targets = (
 				D79E16A31A3830EA004B0DD8 /* FlickrSearch */,
-				D79E16B81A3830EA004B0DD8 /* FlickrSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,13 +248,6 @@
 				D79E16AF1A3830EA004B0DD8 /* Main.storyboard in Resources */,
 				D79E16B41A3830EA004B0DD8 /* LaunchScreen.xib in Resources */,
 				D79E16B11A3830EA004B0DD8 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D79E16B71A3830EA004B0DD8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,23 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D79E16B51A3830EA004B0DD8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D79E16C01A3830EA004B0DD8 /* FlickrSearchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D79E16BB1A3830EA004B0DD8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D79E16A31A3830EA004B0DD8 /* FlickrSearch */;
-			targetProxy = D79E16BA1A3830EA004B0DD8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D79E16AD1A3830EA004B0DD8 /* Main.storyboard */ = {
@@ -502,40 +416,6 @@
 			};
 			name = Release;
 		};
-		D79E16C71A3830EA004B0DD8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FlickrSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickrSearch.app/FlickrSearch";
-			};
-			name = Debug;
-		};
-		D79E16C81A3830EA004B0DD8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FlickrSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickrSearch.app/FlickrSearch";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,15 +433,6 @@
 			buildConfigurations = (
 				D79E16C41A3830EA004B0DD8 /* Debug */,
 				D79E16C51A3830EA004B0DD8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D79E16C61A3830EA004B0DD8 /* Build configuration list for PBXNativeTarget "FlickrSearchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D79E16C71A3830EA004B0DD8 /* Debug */,
-				D79E16C81A3830EA004B0DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
