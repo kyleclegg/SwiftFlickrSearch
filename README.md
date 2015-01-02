@@ -3,6 +3,8 @@ FlickrSearch
 
 This project showcases several fundamental iOS programming tasks in Swift. The app hits the Flickr API to perform a search and display images. It is meant to be a clean example of working with a REST API and JSON in Swift, and demonstrates using asychronous callbacks to simplify networking requests and eliminate messy view controllers.
 
+![Search Screen](https://dl.dropboxusercontent.com/u/7354353/flickrsearch/f2.png) ![Photo Screen](https://dl.dropboxusercontent.com/u/7354353/flickrsearch/f3.png)
+
 ### Technologies Used
 
 - Swift
