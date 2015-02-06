@@ -15,11 +15,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var photos: [FlickrPhoto] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     // MARK: - Actions
     
     @IBAction func resetSearch(sender: AnyObject) {
@@ -106,4 +101,3 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 }
-
