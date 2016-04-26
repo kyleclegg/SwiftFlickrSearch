@@ -30,8 +30,8 @@ Images are retrieved by hitting the [Flickr API](https://www.flickr.com/services
 ```
 
 We use the farm, server, id, and secret to build the image path.
-- Image Path: http://farmFARM.staticflickr.com/SERVER/ID_SECRET_m.jpg
-- Example: http://farm8.staticflickr.com/7564/15981410640_a0d5006167_m.jpg
+- Image Path: https://farmFARM.staticflickr.com/SERVER/ID_SECRET_m.jpg
+- Example: https://farm8.staticflickr.com/7564/15981410640_a0d5006167_m.jpg
 - Response object is the image file
 
 ### Other Notes
