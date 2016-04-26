@@ -18,7 +18,7 @@ struct FlickrPhoto {
     let title: String
     
     var photoUrl: NSURL {
-        return NSURL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoId)_\(secret)_m.jpg")!
+        return NSURL(string: "https://farm\(farm).staticflickr.com/\(server)/\(photoId)_\(secret)_m.jpg")!
     }
     
 }

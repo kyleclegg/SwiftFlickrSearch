@@ -53,15 +53,15 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        performSearchWithText(searchBar.text)
+        performSearchWithText(searchBar.text!)
     }
     
     // MARK - Segue 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PhotoSegue" {
-            let photoViewController = segue.destinationViewController as PhotoViewController
-            let selectedIndexPath = tableView.indexPathForSelectedRow()
+            let photoViewController = segue.destinationViewController as! PhotoViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow
             photoViewController.flickrPhoto = photos[selectedIndexPath!.row]
         }
     }
