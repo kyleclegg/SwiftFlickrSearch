@@ -13,6 +13,7 @@ class FlickrProvider {
     typealias FlickrResponse = (NSError?, [FlickrPhoto]?) -> Void
     
     struct Keys {
+        
         static let flickrKey = "YOUR_API_KEY"
     }
     
