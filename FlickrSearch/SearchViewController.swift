@@ -18,71 +18,71 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - Actions
     
     @IBAction func resetSearch(sender: AnyObject) {
-        photos.removeAll(keepCapacity: false);
+        photos.removeAll(keepingCapacity: false);
         searchBar.text = ""
         searchBar.resignFirstResponder()
         tableView.reloadData()
         self.title = "Flickr Search"
     }
-
+    
     // MARK: - UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let searchResultCellIdentifier = "SearchResultCell"
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(searchResultCellIdentifier, forIndexPath: indexPath) as? SearchResultCell
-        cell!.setupWithPhoto(photos[indexPath.row])
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: searchResultCellIdentifier, for: indexPath as IndexPath) as? SearchResultCell
+        cell!.setupWithPhoto(flickrPhoto: photos[indexPath.row])
         return cell!
     }
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("PhotoSegue", sender: self)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "PhotoSegue", sender: self)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
-
+    
     // MARK: - UISearchBarDelegate
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        performSearchWithText(searchBar.text!)
+        performSearchWithText(searchText: searchBar.text!)
     }
     
-    // MARK - Segue 
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // MARK - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PhotoSegue" {
-            let photoViewController = segue.destinationViewController as! PhotoViewController
+            let photoViewController = segue.destination as! PhotoViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow
             photoViewController.flickrPhoto = photos[selectedIndexPath!.row]
         }
+        
     }
-
+    
     // MARK: - Private
     
     private func performSearchWithText(searchText: String) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        FlickrProvider.fetchPhotosForSearchText(searchText, onCompletion: { (error: NSError?, flickrPhotos: [FlickrPhoto]?) -> Void in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        FlickrProvider.fetchPhotosForSearchText(searchText: searchText, onCompletion: { (error: NSError?, flickrPhotos: [FlickrPhoto]?) -> Void in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if error == nil {
                 self.photos = flickrPhotos!
             } else {
                 self.photos = []
                 if (error!.code == FlickrProvider.Errors.invalidAccessErrorCode) {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    DispatchQueue.main.async(execute: { () -> Void in
                         self.showErrorAlert()
                     })
                 }
             }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 self.title = searchText
                 self.tableView.reloadData()
             })
@@ -90,12 +90,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     private func showErrorAlert() {
-        let alertController = UIAlertController(title: "Search Error", message: "Invalid API Key", preferredStyle: .Alert)
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .Default) { (action) in
+        let alertController = UIAlertController(title: "Search Error", message: "Invalid API Key", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .default) { (action) in
             
         }
         alertController.addAction(dismissAction)
-        self.presentViewController(alertController, animated: true) {
+        self.present(alertController, animated: true) {
             
         }
     }

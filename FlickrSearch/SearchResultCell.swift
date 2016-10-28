@@ -16,7 +16,7 @@ class SearchResultCell: UITableViewCell {
     
     func setupWithPhoto(flickrPhoto: FlickrPhoto) {
         resultTitleLabel.text = flickrPhoto.title
-        resultImageView.sd_setImageWithURL(flickrPhoto.photoUrl)
+        resultImageView.sd_setImage(with: flickrPhoto.photoUrl as URL!)
     }
     
 }

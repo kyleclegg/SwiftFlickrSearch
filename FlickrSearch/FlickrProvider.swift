@@ -9,32 +9,33 @@
 import Foundation
 
 class FlickrProvider {
-
+    
     typealias FlickrResponse = (NSError?, [FlickrPhoto]?) -> Void
     
     struct Keys {
-        static let flickrKey = "0461b2b85aee5a025189ce3eed1aff6b"
+        
+        static let flickrKey = "YOUR_API_KEY"
     }
     
     struct Errors {
         static let invalidAccessErrorCode = 100
     }
     
-    class func fetchPhotosForSearchText(searchText: String, onCompletion: FlickrResponse) -> Void {
-        
-        let escapedSearchText: String = searchText.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+    class func fetchPhotosForSearchText(searchText: String, onCompletion: @escaping FlickrResponse) -> Void {
+        let escapedSearchText: String = searchText.addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+        //let escapedSearchText: String = searchText.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let urlString: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Keys.flickrKey)&tags=\(escapedSearchText)&per_page=25&format=json&nojsoncallback=1"
         let url: NSURL = NSURL(string: urlString)!
-        let searchTask = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+        let searchTask = URLSession.shared.dataTask(with: url as URL, completionHandler: {data, response, error -> Void in
             
             if error != nil {
                 print("Error fetching photos: \(error)")
-                onCompletion(error, nil)
+                onCompletion(error as NSError?, nil)
                 return
             }
             
             do {
-                let resultsDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String: AnyObject]
+                let resultsDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject]
                 
                 guard let results = resultsDictionary else { return }
                 

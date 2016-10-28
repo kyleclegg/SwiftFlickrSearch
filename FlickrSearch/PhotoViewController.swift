@@ -18,7 +18,7 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         
         if flickrPhoto != nil {
-            photoImageView.sd_setImageWithURL(flickrPhoto!.photoUrl)
+            photoImageView.sd_setImage(with: flickrPhoto!.photoUrl as URL!)
         }
     }
     
