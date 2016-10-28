@@ -31,10 +31,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         return photos.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.0
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let searchResultCellIdentifier = "SearchResultCell"
         let cell = self.tableView.dequeueReusableCell(withIdentifier: searchResultCellIdentifier, for: indexPath as IndexPath) as? SearchResultCell
@@ -91,13 +87,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     private func showErrorAlert() {
         let alertController = UIAlertController(title: "Search Error", message: "Invalid API Key", preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .default) { (action) in
-            
-        }
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
         alertController.addAction(dismissAction)
-        self.present(alertController, animated: true) {
-            
-        }
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

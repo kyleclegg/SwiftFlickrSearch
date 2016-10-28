@@ -13,7 +13,6 @@ class FlickrProvider {
     typealias FlickrResponse = (NSError?, [FlickrPhoto]?) -> Void
     
     struct Keys {
-        
         static let flickrKey = "YOUR_API_KEY"
     }
     
@@ -23,7 +22,6 @@ class FlickrProvider {
     
     class func fetchPhotosForSearchText(searchText: String, onCompletion: @escaping FlickrResponse) -> Void {
         let escapedSearchText: String = searchText.addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
-        //let escapedSearchText: String = searchText.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let urlString: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Keys.flickrKey)&tags=\(escapedSearchText)&per_page=25&format=json&nojsoncallback=1"
         let url: NSURL = NSURL(string: urlString)!
         let searchTask = URLSession.shared.dataTask(with: url as URL, completionHandler: {data, response, error -> Void in
@@ -36,7 +34,6 @@ class FlickrProvider {
             
             do {
                 let resultsDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject]
-                
                 guard let results = resultsDictionary else { return }
                 
                 if let statusCode = results["code"] as? Int {
